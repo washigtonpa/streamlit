@@ -17,8 +17,8 @@ def load_data():
     #clientes_encoding = detect_encoding('olist_customers_dataset.csv')
     #geolocal_encoding = detect_encoding("olist_geolocation_dataset.csv")
     
-    df_clientes = pd.read_csv("olist_customers_dataset.csv",  encoding='ISO-8859-1')
-    df_geolocal = pd.read_csv("olist_geolocation_dataset.csv",  encoding='ISO-8859-1')
+    df_clientes = pd.read_csv("olist_customers_dataset.csv")
+    df_geolocal = pd.read_csv("olist_geolocation_dataset.csv")
     df_itens_por_pedido = pd.read_csv("olist_order_items_dataset.csv")
     df_forma_pag = pd.read_csv("olist_dados_forma_pag_limpos.csv")
     df_avaliacao_pedido = pd.read_csv("olist_dados_avaliacao_pedido_limpos.csv")
