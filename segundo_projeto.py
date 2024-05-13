@@ -12,7 +12,7 @@ def detect_encoding(file_path):
     return result['encoding']
 
 # st.title('Função para análise de distribuição geográfica')
- st.title('# STATUS DOS PEDIDOS')
+st.title('STATUS DOS PEDIDOS')
 
 def load_data():
     #clientes_encoding = detect_encoding('olist_customers_dataset.csv')
