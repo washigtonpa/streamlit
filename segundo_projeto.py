@@ -11,7 +11,8 @@ def detect_encoding(file_path):
         result = chardet.detect(f.read())
     return result['encoding']
 
-st.title('Função para análise de distribuição geográfica')
+# st.title('Função para análise de distribuição geográfica')
+ st.title('# STATUS DOS PEDIDOS')
 
 def load_data():
     #clientes_encoding = detect_encoding('olist_customers_dataset.csv')
@@ -32,12 +33,17 @@ def load_data():
 df_clientes, df_geolocal, df_itens_por_pedido, df_forma_pag, df_avaliacao_pedido, df_pedido, df_produtos, df_vendedores, df_categ_produto_traduzido = load_data()
 
 # Função para análise de distribuição geográfica
-def geographic_distribution():
-    df_geolocal = pd.merge(df_clientes, df_geolocal, 
-                                 left_on="customer_zip_code_prefix", 
-                                 right_on="geolocation_zip_code_prefix")
-    customers_by_state = df_geolocal["customer_state"].value_counts()
-    st.header("Distribuição Geográfica dos Clientes")
-    st.bar_chart(customers_by_state)
+#def geographic_distribution():
+ #   df_geolocal = pd.merge(df_clientes, df_geolocal, 
+  #                               left_on="customer_zip_code_prefix", 
+   #                              right_on="geolocation_zip_code_prefix")
+   # customers_by_state = df_geolocal["customer_state"].value_counts()
+    #st.header("Distribuição Geográfica dos Clientes")
+    #st.bar_chart(customers_by_state)
 # Chamar a função de distribuição geográfica
-geographic_distribution()
+#geographic_distribution()
+st.header("Porcentagem das ocorrencias do status")
+contagem_status_por = (df_pedido['order_status'].value_counts()) / (df_pedido['order_status'].count()) * 100
+st.bar_chart(contagem_status_por)
+
+
