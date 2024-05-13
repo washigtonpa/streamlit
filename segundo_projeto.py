@@ -19,7 +19,7 @@ def load_data():
     #geolocal_encoding = detect_encoding("olist_geolocation_dataset.csv")
     
     df_clientes = pd.read_csv("olist_customers_dataset.csv")
-    df_geolocal = pd.read_csv("olist_geolocation_dataset.csv")
+    #df_geolocal = pd.read_csv("olist_geolocation_dataset.csv")
     df_itens_por_pedido = pd.read_csv("olist_order_items_dataset.csv")
     df_forma_pag = pd.read_csv("olist_dados_forma_pag_limpos.csv")
     df_avaliacao_pedido = pd.read_csv("olist_dados_avaliacao_pedido_limpos.csv")
@@ -28,9 +28,9 @@ def load_data():
     df_vendedores = pd.read_csv("olist_sellers_dataset.csv")
     df_categ_produto_traduzido = pd.read_csv("/os_datasets_tratados/product_category_name_translation.csv")
    
-    return df_clientes, df_geolocal, df_itens_por_pedido, df_forma_pag, df_avaliacao_pedido, df_pedido, df_produtos, df_vendedores, df_categ_produto_traduzido
+    return df_clientes, df_itens_por_pedido, df_forma_pag, df_avaliacao_pedido, df_pedido, df_produtos, df_vendedores, df_categ_produto_traduzido
 # Carregar os datasets
-df_clientes, df_geolocal, df_itens_por_pedido, df_forma_pag, df_avaliacao_pedido, df_pedido, df_produtos, df_vendedores, df_categ_produto_traduzido = load_data()
+df_clientes, df_itens_por_pedido, df_forma_pag, df_avaliacao_pedido, df_pedido, df_produtos, df_vendedores, df_categ_produto_traduzido = load_data()
 
 # Função para análise de distribuição geográfica
 #def geographic_distribution():
