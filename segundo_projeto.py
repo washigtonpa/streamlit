@@ -3,7 +3,7 @@ import streamlit as st
 # import plotly.express as px
 #import matplotlib.pyplot as plt
 import pandas as pd
-import chardet  # Biblioteca para detectar encoding
+#import chardet  # Biblioteca para detectar encoding
 
 def detect_encoding(file_path):
     # Detectar o encoding do arquivo CSV
